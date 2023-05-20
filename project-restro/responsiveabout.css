@@ -1,0 +1,39 @@
+ @media screen  and (max-width:700px) {
+   body div{
+    display: flex;
+    flex-direction:column-reverse;
+    height: 200vh;
+   }
+   .sec-right img {
+    height: 50vh;
+    width: 50vw;
+  }
+  .sec-right img{
+    display: block;
+margin: auto;
+
+position: relative;
+top: -36vh;
+  }
+  p{
+    width: 88vh;
+    position: relative;
+top: -34vh;
+padding-left: 7vw;
+  }
+  nav a{
+    position: relative;
+right: -22vw;
+top: -2vh;
+  }
+  header{
+    display: flex;
+flex-direction: column-reverse;
+  }
+  div button{
+    top: -25vh;
+  }
+ 
+  
+    
+ }
