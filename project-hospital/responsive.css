@@ -1,0 +1,29 @@
+@media  screen and (max-width:900px) {
+     div main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .mainheader{
+        flex-direction: column;
+        height: 150px;
+        height: 200px;
+    }
+    img{
+        padding: 0;
+    }
+    .left-section button {
+        font-size: x-small;
+        height: 35px;
+        padding: 0;
+        width: 90px;
+        font-weight: bold;
+    }
+    .mainheader button{
+        margin-right: 0;
+        padding: 6px 20px;
+    }
+    div figure img{
+        width: min-content;
+    }
+    
+}
