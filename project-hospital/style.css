@@ -49,6 +49,9 @@ nav a{
     border-radius: 10px;
     margin-right: 60px;
 }
+.mainheader button:hover{
+    background-color:rgba(207, 12, 197, 0.852) ;
+}
 main{
     display: flex;
     justify-content: space-between;
@@ -104,6 +107,27 @@ p{
    
     margin-bottom: 20px;
 }
+.call a{
+    position: relative;
+left: -10vw;
+text-decoration: none;
+padding: 10px 45px;
+text-align: center;
+margin-right: 60px;
+border: none;
+color: white;
+background-color: rgb(125, 63, 225);
+border-radius: 10px;
+
+
+}
+.call a:hover{
+    background-color: rgba(207, 12, 197, 0.852);
+}
+.left-section button:hover{
+    background-color: rgba(207, 12, 197, 0.852);
+
+}
 
 .left-section button{
     padding: 10px 45px;
@@ -116,12 +140,13 @@ p{
     
 
 }
+script{
+    background-image: url(animated\ vid.mp4);
+}
 .left-section button:hover{
     cursor: grab;
 }
 .mainheader button:hover{
+    /* background-color: rgb(74, 9, 177); */
     cursor: grab;
-}
-.btn:hover{
-    background-color: rgb(74, 9, 177);
 }
