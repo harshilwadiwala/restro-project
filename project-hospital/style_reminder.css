@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+  
+  h1 {
+    color: #007bff;
+    margin-top: 200px;
+  }
+  
+  
+  
+  #medications {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* opacity: 0; */
+  }
+  
+  #medications li {
+    margin-bottom: 10px;
+  }
+  
+  form {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(132, 27, 27, 0.1);
+  }
+  
+  input[type="text"], input[type="time"] {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="time"]:focus {
+    outline: none;
+    border-color: #8466e6;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #d671f7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e04444;
+  }
+  
+  @media screen and (max-width: 480px) {
+    #medicationList, form {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://thumbs.dreamstime.com/b/d-rendering-cartoon-character-doctors-international-team-healthcare-professionals-isolated-blue-background-medical-242350887.jpg ');
+    background-size: cover;
+    background-color: antiquewhite;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 200vh;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    height: 100vh;
+  }
+  h1 {
+    font-family: 'Helvetica', Arial, sans-serif;
+    color: #d671f7;
+    margin-top: 20px;
+    position: relative;
+    top: 7vh;
+   
+  }
+  
+  #medicationList, form {
+    font-family: 'Verdana', Arial, sans-serif;
+  }
+  
+  /* Rest of the CSS styles */
+  
+  
+  
+  /* #medicationList, */
+  #medicationForm {
+    font-family: 'Verdana', Arial, sans-serif;
+    margin: 0 auto; 
+    max-width: 400px; 
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  #medicationList{
+    font-family: 'Verdana', Arial, sans-serif;
+    margin: 0 auto; /* Center content horizontally */
+    max-width: 400px; /* Adjust the max-width as needed */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   font-weight: bold;
+    margin-top: 7vh;   
+    opacity: 0.6;
+  }
+  
+  /* Rest of the CSS styles */
+  #medicationName {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #medicationName:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  .medication-list {
+    margin-top: 20px;
+  }
+  
+  .medication-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .medication-list li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    opacity: 0.6;
+  }
+  
+  .medication-list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .medication-list .medication-name {
+    font-weight: bold;
+  }
+  
+  .medication-list .medication-time {
+    color: #a72424;
+  }
+  
+  .medication-list .medication-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .medication-list .medication-actions button {
+    margin-left: 10px;
+  }
+  
+  
+  /* //////////////////////// */
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+    opacity: 0.6;
+    height: 60vh;
+    padding-bottom: 0;
+    position: relative;
+    top: 20vh;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .medication-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .medication-name {
+    flex: 1;
+    font-weight: bold;
+  }
+
+  .medication-time {
+    flex: 1;
+  }
+
+  .medication-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .edit-button,
+  .delete-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #ce5b74;
+  }

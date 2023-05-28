@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medication Reminder</title>
+   <link rel="stylesheet" href="style_reminder.css">
+   <link rel="stylesheet" href="responsive_reminder.css">
+  </head>
+  <body>
+    <h1>Medication Reminder</h1>
+    <div class="container">
+        <h2>Medication</h2>
+        <form id="medicationForm">
+            <input
+            type="text"
+            id="medicationName"
+            placeholder="Medication Name"
+            required
+        />
+        <input type="time" id="medicationTime" required />
+        <button type="submit">Add Medication</button>
+    </form>
+    <h2>Medication List</h2>
+      <ul id="medicationList"></ul>
+    </div>
+
+    <script src="script_reminder.js"></script>
+  </body>
+</html>

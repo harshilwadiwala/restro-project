@@ -1,0 +1,32 @@
+/* Default styles */
+
+/* Add your default styles here */
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 900px) {
+    body {
+      font-size: 14px;
+    }
+  
+    #medicationList,
+    form {
+      max-width: 90%;
+    }
+  }
+  
+  /* Media query for screens smaller than 576px */
+  @media (max-width: 900px) {
+    body {
+      font-size: 12px;
+    }
+  
+    #medicationList,
+    form {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  /* Rest of the CSS styles */
+  
+  
