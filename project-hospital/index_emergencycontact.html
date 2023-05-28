@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Contact Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style_emergencycontact.css">
+
+  <link rel="stylesheet" href="responsive_emergencycontact.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Emergency Contact Form</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" class="form-control" id="patientName" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select class="form-control" id="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea class="form-control" id="address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="relationship">Relationship:</label>
+        <input type="text" class="form-control" id="relationship" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" class="form-control" id="phoneNumber" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Save Contact</button>
+    </form>
+    <div id="messageBox" class="alert"></div>
+    <h3>Contact List</h3>
+    <div class="form-group">
+      <input type="text" class="form-control" id="searchInput" placeholder="Search">
+      
+    </div>
+    <div id="contactList"></div>
+  </div>
+
+  <!-- Add an ID to the contact list -->
+<div id="contactList" class="hidden">
+    <!-- Contact items will be displayed here -->
+  </div>
+
+  <div id="container">
+  <!-- Content goes here -->
+</div>
+
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script_emergencycontact.js"></script>
+</body>
+
+</html>

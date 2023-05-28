@@ -1,0 +1,13 @@
+@media screen and (max-width:564px) {
+    body .container{
+        width: 78vw;
+    }
+  
+    
+}
+@media screen and (max-width:576px) {
+
+    body .container{
+        width: 78vw;
+    }
+}
