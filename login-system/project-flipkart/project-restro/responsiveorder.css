@@ -1,0 +1,31 @@
+@media screen and (max-width:700px) {
+    header{
+        display: flex;
+flex-direction: column;
+    }
+    h1 {
+        padding-left: 2vw;
+      }
+      div .input1{
+        width: 30vw;
+      }
+      body div .input2{
+        width: 30vw;
+      }
+      body div .input3{
+        width: 30vw;
+      }
+      body div .input4{
+        width: 30vw;
+      }
+      body div .input5{
+        width: 30vw;
+      }
+      body div .input6{
+        width: 45vw;
+      }
+      div{
+        width: 30vw;
+      }
+    
+}
