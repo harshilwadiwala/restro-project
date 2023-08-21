@@ -1,0 +1,1626 @@
+.solar-body{
+    background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+   
+}
+
+.sun img{
+    height: 25vh;
+   position: relative;
+   top: 23vh;
+   right: -70vh;
+   /* mix-blend-mode:difference; */
+   
+   filter: drop-shadow(2px -1px 33px red);
+}
+.mercury img{
+    position: relative;
+   top: 51vh;
+   right: -110vh;
+   /* mix-blend-mode: exclusion; */
+   animation: orbit 14s infinite ease-in-out;
+   z-index: 1;
+   height: 5vh;
+   position: absolute;
+   left: 34rem;
+   filter: drop-shadow(5px -1px 5px rgb(174, 52, 52));
+
+}
+.venus img{
+   height: 6vh;
+   animation: orbit_ven 16s infinite ease-in-out;
+   z-index: 1;
+   filter: drop-shadow(5px -1px 5px rgb(174, 52, 52));
+   position: absolute;
+   left: 31rem;
+   top: 58vh;
+}
+.earth img{
+    height: 7vh;
+    animation: orbit_ear 19s infinite ease-in-out;
+    z-index: 1;
+    position: absolute;
+    filter: drop-shadow(5px -1px 5px rgb(30, 12, 218));
+    left: 27rem;
+    top: 51vh;
+}
+
+ .mars img{
+    height: 5.5vh;
+    animation: orbit_mar 22s infinite ease-in-out;
+    filter: drop-shadow(5px -1px 5px rgb(201, 15, 15));
+    z-index: 1;
+    position: absolute;
+    left: 23rem;
+    top: 59vh;
+ }
+ .jupiter img{
+    height: 17vh;
+    animation: orbit_jup 34s infinite ease-in-out;
+    filter: drop-shadow(8px -1px 5px rgba(172, 122, 6, 0.634));
+    z-index: 1;
+    position: absolute;
+    left: 12rem;
+    top: 43vh;
+ }
+ .saturn img{
+    height: 15vh;
+    animation: orbit_sat 34s 2s infinite ease-in-out;
+    filter: drop-shadow(8px -1px 5px rgba(238, 192, 84, 0.634));
+    z-index: 1;
+    position: absolute;
+    left: 8rem;
+    top: 56vh;
+ }
+ .uranus img{
+    height: 11vh;
+    animation: orbit_ura 48s 1s infinite ease-in-out;
+    filter: drop-shadow(8px -1px 5px rgb(55, 178, 178));
+    z-index: 1;
+    position: absolute;
+    left: 5rem;
+    top: 50vh;
+ }
+ .neptune img{
+    height: 8vh;
+   
+    animation: orbit_nep 50s 4s infinite ease-in-out;
+    filter: drop-shadow(8px -1px 5px rgb(194, 194, 197));
+    z-index: 1;
+    position: absolute;
+    left: 0rem;
+    top: 50vh;
+ }
+ 
+@keyframes orbit{
+    49%{z-index: 1;}
+   
+     50%{
+         left: 58em ;
+         z-index: -1;
+         filter: drop-shadow(-5px -1px 5px rgb(174, 52, 52));
+     }
+     99%{z-index: -3;
+      /* filter: drop-shadow(0px -1px 5px red); */
+    }
+     100%{
+         left: 34em;
+         z-index: 1;
+         filter: drop-shadow(5px -1px 5px rgb(174, 52, 52));
+     } 
+    
+  }
+
+  @keyframes orbit_ven{
+    49%{z-index: 1;}
+     50%{
+         left: 67em ;
+         z-index: -1;
+         filter: drop-shadow(-5px -1px 5px rgb(174, 52, 52));
+     }
+     99%{z-index: -3;}
+     100%{
+         left: 31em;
+         z-index: 1;
+         filter: drop-shadow(5px -1px 5px rgb(174, 52, 52));
+     } 
+    
+  }
+  @keyframes orbit_ear{
+    49%{z-index: 1;}
+     50%{
+         left: 74em ;
+         z-index: -1;
+         filter: drop-shadow(-5px -1px 5px rgb(30, 12, 218))
+     }
+     99%{z-index: -3;}
+     100%{
+         left: 27em;
+         z-index: 1;
+         filter: drop-shadow(5px -1px 5px rgb(30, 12, 218))
+     } 
+    
+  }
+
+  @keyframes orbit_mar{
+    49%{z-index: 1;}
+     50%{
+         left: 77em ;
+         z-index: -1;
+         filter: drop-shadow(-5px -1px 5px rgb(201, 15, 15));
+     }
+     99%{z-index: -3;}
+     100%{
+         left: 23em;
+         z-index: 1;
+         filter: drop-shadow(5px -1px 5px rgb(201, 15, 15));
+     } 
+    
+  }
+  
+  @keyframes orbit_jup{
+    49%{z-index: 1;}
+     50%{
+         left: 76em ;
+         z-index: -1;
+         filter: drop-shadow(-8px -1px 5px rgba(172, 122, 6, 0.634));
+     }
+     99%{z-index: -3;}
+     100%{
+         left: 12em;
+         z-index: 1;
+         filter: drop-shadow(8px -1px 5px rgba(172, 122, 6, 0.634));
+     } 
+    
+  }
+  @keyframes orbit_sat{
+    49%{z-index: 1;}
+     50%{
+         left: 81em ;
+         z-index: -1;
+         filter: drop-shadow(-8px -1px 5px rgba(238, 192, 84, 0.634));
+     }
+     99%{z-index: -3;}
+     100%{
+         left: 8em;
+         z-index: 1;
+         filter: drop-shadow(8px -1px 5px rgba(238, 192, 84, 0.634));
+     } 
+    
+  }
+
+  @keyframes orbit_ura{
+    49%{z-index: 1;}
+     50%{
+         left: 86em ;
+         z-index: -1;
+         filter: drop-shadow(-8px -1px 5px rgb(55, 178, 178));
+     }
+     99%{z-index: -3;}
+     100%{
+         left: 5em;
+         z-index: 1;
+         filter: drop-shadow(8px -1px 5px rgb(55, 178, 178));
+     } 
+    
+  }
+  @keyframes orbit_nep{
+    49%{z-index: 1;}
+     50%{
+         left: 90em ;
+         z-index: -1;
+         filter: drop-shadow(-8px -1px 5px rgb(194, 194, 197));
+     }
+     99%{z-index: -3;}
+     100%{
+         left: 0em;
+         z-index: 1;
+         filter: drop-shadow(8px -1px 5px rgb(194, 194, 197));
+     } 
+    
+  }
+ 
+/* clock */
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  
+  .datetime{
+    color: #fff;
+    background: #10101E;
+    font-family: "Segoe UI", sans-serif;
+    width: 340px;
+    padding: 15px 10px;
+   
+    border-radius: 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+    position: relative;
+    right: -70vh;
+    top: 5vh;
+    background: none;
+  }
+  
+  .datetime:hover{
+    /* background-image: url(https://media.istockphoto.com/id/1138288769/photo/light-purple-defocused-blurred-motion-abstract-background.webp?b=1&s=170667a&w=0&k=20&c=AcHwzfWDDqno9QWii9GgQiNfhDwYacQlprzksbkkmMk=); */
+    box-shadow: 1px 1px 15px 20px rgb(28, 28, 196);
+  }
+  
+  .date{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time span:last-child{
+   
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+       
+  .datetime :hover.time span:last-child{
+    background: #3013d3;
+  }
+
+ /* ======COMETS CSS ========= */
+
+ .comet-body{
+  background-image: url(comet.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  height: 140vh;
+  color:white;
+  position: relative;
+  top: 4vh;
+ 
+}
+.container{
+/* background-image: url(https://w0.peakpx.com/wallpaper/766/725/HD-wallpaper-blurred-colorful-vertical-portrait-display-blue-gradient-thumbnail.jpg); */
+background-size: cover;
+background-repeat: no-repeat;
+margin: 0;
+padding: 0;
+}
+.comet-h1,.key-sci-tar{
+  display: flex;
+  text-align: center;
+ justify-content: center;
+ position: relative;
+ top: 6vh;
+ letter-spacing: 1vh;
+  font-family: 'Rubik Wet Paint', cursive;
+}
+
+.flip-box a{
+  font-family: 'Kalam', cursive;
+  text-decoration:none;
+  color: whitesmoke;
+  font-weight: 600;
+  position: relative;
+  top: 4vh;
+ 
+}
+.sub-container a:hover{
+text-decoration: underline;
+/* filter: drop-shadow(15px 15px 200px white inverted(60%)); */
+
+}
+.container.sub-container .flip-box h4{
+  font-size: 2.3vh;
+  color: #405ee2;
+  position: relative;
+  top: 6vh;
+  right: -7vh;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  display: flex;
+  justify-content: center;
+  top: 7vh;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2vh;
+  left: 78vh;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.comet-body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  position: relative;
+  top: -10vh;
+  background-color: transparent;
+  width: 20vw;
+  height: 30vh;
+  
+  perspective: 1000px;
+  border-radius: 3vh;
+}
+
+.key-sci-tar{
+  
+  color: white;
+  position: relative;
+  top: 30vh;
+  right: -1vh;
+  height: 8vh;
+  z-index: 1;
+  font-size: 3vh;
+}
+.key-sci-tar-img{
+  
+  position: relative;
+  right: -60vh;
+  height: 26vh;
+  width: 75vh;
+ top:9vh;
+  
+}
+.comet-des{
+  position: relative;
+  right: -60vh;
+  top: 9vh;
+  width: 45vh;
+  font-family: 'Kalam', cursive;
+  color: white;
+
+}
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 5vh;
+}
+
+.flip-box-back {
+  background-image: url(https://img.freepik.com/premium-vector/gradient-background_1159-5231.jpg?size=626&ext=jpg&ga=GA1.2.1377789698.1684438917&semt=ais);
+  height: 30vh;
+ 
+  transform: rotateY(180deg);
+  width: 40vh;
+  border-radius: 5vh;
+}
+p{
+    color: white;
+    width: 24vh;
+    margin-left: auto;
+margin-right: auto;
+position: relative;
+top: 2vh;
+line-height: 3vh;
+letter-spacing: 2px;
+
+}
+.sub-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(10%,1fr));
+  gap: 0vw;
+ margin-left: 9vh;
+ margin-right: 9vh;
+ margin-top: 0%;
+ margin-bottom: 5vh;
+  padding: 2vh;
+ 
+ 
+}
+
+.flip-box-front img{
+      height: 30vh;
+      width: 20vw;
+      border-radius: 5vh;
+}
+.h1{
+  position: relative;
+  right: -8vh;
+}
+.h2{
+  position: relative;
+  right: -13vh;
+}
+.h3{
+  position: relative;
+  right: -15vh;
+  
+}
+
+.h4{
+  position: relative;
+  right: -16vh;
+}
+.h5{
+  position: relative;
+  right: -10vh;
+ 
+ 
+}
+.h6{
+  position: relative;
+  right: -13vh;
+}
+.h7{
+  position: relative;
+  right: -16vh;
+}
+
+.h8{
+  position: relative;
+  right: -10vh;
+}
+
+.h9{
+  position: relative;
+  right: -8vh;
+}
+.h10{
+  position: relative;
+  right: -10vh;
+}
+.h11{
+  position: relative;
+  right: -13vh;
+}
+.h12{
+  position: relative;
+  right: -10vh;
+}
+
+.h13{
+  position: relative;
+  right: -10vh;
+}
+
+.h14{
+  position: relative;
+  right: -10vh;
+}
+.h15{
+  position: relative;
+  right: -17vh;
+}
+.h16{
+  position: relative;
+  right: -14vh;
+}
+.h17{
+  position: relative;
+  right: -10vh;
+}
+h4{
+  color: #0e13bc;
+  font-family: 'Kalam', cursive;
+  position: relative;
+  top: 2vh;
+}
+#thread1{
+  position: relative;
+  top: 8vh;
+  right: -10vh;
+  width: 88%;
+  height: 3px;
+  border: none;
+  background: rgb(48, 8, 8);
+  -webkit-animation: thread2 8s infinite;
+  -moz-animation:    thread2 8s infinite;
+  -o-animation:      thread2 8s infinite;
+  animation:         thread2 8s infinite;
+}
+#thread6{
+  position: relative;
+  top: -5vh;
+  right: -10vh;
+  width: 88%;
+  height: 3px;
+  border: none;
+  background: rgb(48, 8, 8);
+  -webkit-animation: thread2 6s infinite;
+  -moz-animation:    thread2 6s infinite;
+  -o-animation:      thread2 6s infinite;
+  animation:         thread2 6s infinite;	
+}
+
+@keyframes thread2 {
+  0%   { width: 88%; }
+  50% { width: 88%; }
+  80% { width: 0px;}
+  100%{ width:88%;}
+}
+.last{
+  position: relative;
+  top: 20vh;
+  width: 10%;
+  right: -40vh;
+  background: white;
+}
+
+/* ====METEORS AND METOERITES CSS===== */
+
+.meteors-body{
+  height: 20vh;
+  background: #000;
+  z-index: 1;
+}
+.met-lower-body{
+  
+  background-image: url(https://wallpaperaccess.com/full/1745055.jpg);
+  background-repeat:repeat-y;
+  background-size: 100vw 50vh;
+  height: 420vh;
+  position: relative;
+  top: -60vh;
+
+}
+ .meteors-2{
+  height: 30vh;
+  width: 20vw;
+  border-radius: 5vh;
+ }
+
+ .image-container {
+  display: inline-block;
+  position: relative;
+}
+
+#image {
+  width: 95vw;
+  position: relative;
+  right: -5vh;
+  height: 80vh;
+  transition: transform 0.3s ease;
+}
+
+.met-title{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -75vh;
+  color: whitesmoke;
+  font-family: 'Lobster Two', cursive;
+  letter-spacing: 0.6vh;
+}
+.meteors-des{
+  color: white;
+ position: relative;
+ right: -60vh;
+ width: 25vw;
+ top: -70vh;
+ display: flex;
+ text-align: center;
+}
+.hover-underline-animation-2 {
+  display: inline-block;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  top: 7vh;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  position: relative;top: -70vh; 
+  font-size: larger;
+  color: yellow;
+}
+
+.hover-underline-animation-2:after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2vh;
+  left: 78vh;
+  background-color: yellow;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation-2:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.Meteor-Showers-h2{
+  color: white;
+  position: relative;
+  top: 20vh;
+  font-family: 'Rubik Wet Paint', cursive;
+  display: flex;
+  justify-content: center;
+  height: 8vh;
+  z-index: 1;
+  font-size: 3vh;
+ 
+  letter-spacing: 0.3vh;
+}
+#met-contain{
+  position: relative;
+  top: 50vh;
+  z-index: 1;
+}
+.meteor-shower-faq1{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 60vh;
+  color: white;
+  font-family: 'Preahvihear', sans-serif;
+  letter-spacing: 0.3vh;
+  z-index: 1;
+}
+.meteor-shower-des{
+  position: relative;
+  top: 70vh;
+  color: white;
+  width: 40vw;
+  font-size: large;
+  font-family: 'Lobster Two', cursive;
+  line-height: 4vh;
+  z-index: 1;
+
+}
+.meteor-shower-des2{
+  position: relative;
+  top: 90vh;
+  width: 30vw;
+  color: white;
+  font-size: large;
+  font-family: 'Lobster Two', cursive;
+  line-height: 4vh;
+  z-index: 1;
+}
+.meteor-shower-img{
+  width: 90vw;
+  height: 90vh;
+  position: relative;
+  top:80vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  right: -10vh;
+
+  visibility: visible;
+  overflow: hidden;
+  z-index: 1;
+  /* filter: contrast(200%); */
+  
+  /* border-radius: 10vh; */
+ 
+}
+.meteor-shower-faq2{
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: 'Preahvihear', sans-serif;
+  letter-spacing: 0.3vh;
+  position: relative;
+  top:85vh;
+  z-index: 1;
+}
+.meteor-story{
+  display: inline-block;
+ 
+  display: flex;
+  justify-content: center;
+  
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  position: relative;
+  top: 100vh; 
+  left: -2vw;
+  font-size: larger;
+  color: yellow;
+}
+
+.meteor-story:after {
+  content: '';
+  position: absolute;
+  width: 10%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2vh;
+  left: 89vh;
+  background-color: yellow;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.meteor-story:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.splash-paint-img{
+ position: relative;
+ top: -70vh;
+ right: -35vw;
+}
+#upperhr{
+  position: relative;
+  top: 26vh;
+  right: -10vh;
+  width: 88%;
+  height: 3px;
+  border: none;
+  background:whitesmoke;
+  -webkit-animation: thread2 8s infinite;
+  -moz-animation:    thread2 8s infinite;
+  -o-animation:      thread2 8s infinite;
+  animation:         thread2 8s infinite;
+}
+#low-hr{
+  position: relative;
+  top: 110vh;
+  right: -10vh;
+  width: 88%;
+  height: 3px;
+  border: none;
+  background: whitesmoke;
+  -webkit-animation: thread2 6s infinite;
+  -moz-animation:    thread2 6s infinite;
+  -o-animation:      thread2 6s infinite;
+  animation:         thread2 6s infinite;	
+}
+#mid-hr{
+  position: relative;
+  top:50vh;
+  right: -10vh;
+  width: 88%;
+  height: 3px;
+  border: none;
+  background: whitesmoke;
+  -webkit-animation: thread2 6s infinite;
+  -moz-animation:    thread2 6s infinite;
+  -o-animation:      thread2 6s infinite;
+  animation:         thread2 6s infinite;	
+}
+.last2{
+  position: relative;
+  top: 60vh;
+  width: 1%;
+
+}
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+ border-radius: 5vh;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+  box-shadow: 0px 0px 50px rgb(0, 76, 255) ;
+  
+}
+
+.flip-box-front, .flip-box-back-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: white;
+  border-radius: 5vh;
+  border: 1px solid rgb(122, 152, 233);
+}
+.flip-box-back-2{
+  /* background-image: url(https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?w=360); */
+  
+  height: 30vh;
+  background-color: rgb(5, 10, 44);
+  transform: rotateY(180deg);
+  width: 40vh;
+  border-radius: 5vh;
+}
+.p1{
+  color: white;
+}
+.flip-box-back-2 .a{
+  color: white;
+}
+
+/* ==========astro css========== */
+
+.astro-img{
+  width: 50vw;
+  height: 80vh;
+  position: relative;
+  left: 10vh;
+  background: #000;
+}
+
+.astro-body{
+  height: 300vh;
+}
+.astro-lower-body{
+  
+  background-image: url(https://img.rawpixel.com/private/static/images/website/2022-05/fl44341686155-image-ktxraz3m.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=d3a6c77acd4198b1142ec8719ec0a1be);
+  background-repeat:repeat-y;
+  background-size: 100vw 50vh;
+  height: 200vh;
+  position: relative;
+  top: -3vh;
+
+}
+.astro-des{
+  color: white;
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  line-height: 4vh;
+  font-family: 'Lobster Two', cursive;
+}
+.astro-content{
+  display: flex;
+  background: #000;
+  height: 90vh;
+}
+.astro-tit{
+  color: white;
+  z-index: 1;
+  margin-top: 4vh;
+  font-family: 'Preahvihear', sans-serif;
+  background: none;
+}
+#astro-know-more{
+  position: relative;
+  top: -10vh;
+}
+#astro-10{
+  position: relative;
+  right: 15vh;
+}
+#astro-11{
+  position: relative;
+  right: 30vh;
+}
+#astro-sub-contain{
+  position: relative;
+  top: 40vh;
+}
+.astro-key-sci-tar{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 15vh;
+  font-family: 'Preahvihear', sans-serif;
+  color: #405ee2;
+}
+.astro-faq{
+  color: white;
+  position: relative;
+  top: 40vh;
+  display: flex;
+  justify-content: center;
+  font-family: 'Preahvihear', sans-serif;
+}
+.astro-faq-des{
+  color: white;
+  position: relative;
+  top: 50vh;
+  font-family: 'Preahvihear', sans-serif;
+  width: 20vw;
+}
+
+/* ========moon-earth-css========== */
+.moon_main{
+
+  height: 100vh;
+  position: relative;
+  right: -80vh;
+  top: 10vh;
+}
+.earth_moon_upper-body{
+  background: #000;
+  display: flex;
+  position: relative;
+  /* top: 10vh; */
+  height: 110vh;
+}
+.ear-moon-h1-tit{
+  color: white;
+  font-size: 8vh;
+  position: relative;
+  top: 15vh;
+  right: 85vh;
+  font-family: 'Kalam', cursive;
+}
+.ear-moon-des-tit{
+  color: white;
+ 
+  position: relative;
+  top: 35vh;
+  width:25vw;
+  /* letter-spacing: 0.6vh; */
+  line-height: 4vh;
+  right: 130vh;
+  display: flex;
+  text-align: center;
+  font-family: 'Kalam', cursive;
+}
+
+.dist{
+  color:white;
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 63vh;
+  top: 1vh;
+}
+.visitor-head{
+  position: relative;
+  right: -80vh;
+}
+.dist-head{
+  position: relative;
+  right: -20vh;
+  color: rgb(132, 167, 224);
+}
+.dist-earth{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -12vh;
+}
+.visitor{
+  color: white;
+  position: relative;
+  top: 0.8vh;
+}
+.human-visitor{
+ position: relative;
+ right: 10vh;
+ top: -18vh;
+ color: rgb(132, 167, 224);
+
+}
+.moon-info{
+  position: relative;
+  top: -12vh;
+  display: flex;
+  flex-direction: column;
+}
+.walker-head{
+  position: relative;
+  top: -10.8vh;
+  right: -110vh;
+  color: rgb(132, 167, 224);
+}
+.waker{
+  color: white;
+  position: relative;
+  top: -9.5vh;
+  right: -30vh;
+}
+.robo-visit{
+  position: relative;
+  right: -75rem;
+  top: -15em;
+  color: rgb(132, 167, 224);
+}
+.robo-no{
+  
+
+  position: relative;
+  right: 39rem;
+  top: 0.6em;
+}
+.moonwalker{
+  position: relative;
+  right: -1rem;
+  /* position: relative; */
+  top: -14vh;
+  
+}
+.bg-img{
+  filter: opacity(45%);
+  height: 12vh;
+  position: relative;
+  top: -6vh;
+}
+
+.moon-des{
+color: white;
+  width: 40vw;
+  position: relative;
+  top: 10rem;
+  line-height: 5vh;
+  font-family: 'Kalam', cursive;
+}
+.earth-moon-lower-body{
+  position: relative;
+  top: -18.8em;
+  background-repeat: repeat-y;
+  background-size: 100vw 50vh;
+  height: 400vh;
+  background-image: url(https://t4.ftcdn.net/jpg/04/63/04/75/360_F_463047556_fjroWSSRHQDt0PUsXTi4wyBzXVh1U01G.jpg);
+}
+.moon-facts{
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 30rem;
+  font-family: 'Kalam', cursive;
+}
+.fact1tit{
+  color: white;
+  position: relative;
+  top: 40rem;
+  right: -16rem;
+
+  /* height: 100vh; */
+}
+.facts{
+  font-family: 'Kalam', cursive;
+}
+.fact-container{
+  
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(19%,1fr));
+}
+.fact1-des{
+  /* border-right: 2px solid; */
+  position: relative;
+  top: 45rem;
+  right: -6rem;
+  color: white;
+  width: 15rem;
+  text-align: center;
+}
+.fact2-des{
+  position: relative;
+  top: 5rem;
+  right: 9rem;
+  color: white;
+  width: 15rem;
+  text-align: center;
+}
+.fact3-des{
+  position: relative;
+  top: 45rem;
+  right: 7rem;
+  color: white;
+  width: 18rem;
+  text-align: center;
+}
+
+.fact2tit{
+  color: white;
+  position: relative;
+  top: 40rem;
+  right: -10rem;
+}
+.fact3tit{
+  color: white;
+  position: relative;
+  top: 40rem;
+ right: -5rem;
+}
+.fact-img{
+  height: 30vh;
+  position: relative;
+  top: 40em;
+  right: -8em;
+}
+.num{
+  color: white;
+  position: relative;
+  top: 19em;
+  right: -8em;
+}
+#moon-know{
+  position: relative;
+  top: -10em;
+  right: 23em;
+  z-index: 1;
+}
+/* ==========mars-moon-css========== */
+
+.mars-moon-main-img{
+  height: 80vh;
+  position: relative;
+  /* right: -80vh; */
+  top: 10vh;
+  filter: contrast(120%);
+}
+.mars_moon_upper-body{
+  background-repeat: no-repeat;
+  background-size: 100vw 90vh;
+background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
+  height: 90vh;
+}
+.main-mars-moon-head{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -18em;
+  font-family: 'Kalam', cursive;
+}
+.main-mars-moon-des{
+  position: relative;
+  top: -34em;
+  right: -26em;
+  width: 30vw;
+  color: white;
+  line-height: 3vh;
+  font-family: 'Kalam', cursive;
+}
+
+.mars_moon_low-body{
+  background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
+  height: 300em;
+  background-size: 100vw 80vh;
+  position: relative;
+  background-repeat: repeat-y;
+  top: 0.2vh;
+}
+.basic-des{
+  width: 30vw;
+  position: relative;
+  top: 16em;
+}
+
+.phobos-img{
+  position: relative;
+  top: 39em;
+  right: -6em;
+}
+.phobos-des{
+  position: relative;
+  top: -8em;
+  right: -26em;
+  width: 34vw;
+  color: white;
+  
+  line-height: 3em;
+  font-family: 'Kalam', cursive;
+
+}
+.phobos-head{
+  position: relative;
+  top: 10em;
+  font-size: 5vh;
+  font-family: 'Kalam', cursive;
+  z-index: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.Deimos-head{
+  position: relative;
+  /* top: 10em; */
+  font-size: 5vh;
+  font-family: 'Kalam', cursive;
+  z-index: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.deimos-img{
+  position: relative;
+  top: 9em;
+  right: -6em;
+  mix-blend-mode: difference;
+}
+.Deimos-des{
+  position: relative;
+  top: -32em;
+  right: -26em;
+  width: 34vw;
+  color: white;
+  
+  line-height: 3em;
+  font-family: 'Kalam', cursive;
+
+}
+/* =========jupiter-moon-css========== */
+
+#jupiter-moon-img{
+
+  position: relative;
+  right: -39rem;
+  width: 60vw;
+  height: 95vh;
+background-image: url(https://wallpaperaccess.com/full/17493.jpg);
+background-size: 100vw 100vh;
+}
+
+.jupiter-moon-upper-body{
+  background: #000;
+  height: 95vh;
+
+}
+.jupiter-moon-tit{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -43rem;
+  font-family: 'Kalam', cursive;
+}
+.jupiter-moon-tit-des{
+  color: white;
+  position: relative;
+  top: -40rem;
+  width: 30rem;
+  right: 25em;
+  font-family: 'Kalam', cursive;
+  line-height: 4vh;
+}
+
+.jupiter-moon-lower-body{
+  height: 470em;
+  background-size: 100vw 70em;
+  position: relative;
+  background-repeat: repeat-y;
+  top: 0.2vh;
+
+  background-image: url(https://unblast.com/wp-content/uploads/2021/01/Space-Background-Image-7.jpg);
+}
+
+.abt-tit{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 13rem;
+  font-family: 'Kalam', cursive;
+}
+.abt-des{
+  position: relative;
+  top: 18em;
+
+  width: 38vw;
+  color: white;
+  
+  line-height: 3em;
+  font-family: 'Kalam', cursive;
+}
+.ul-jup-des{
+  position: relative;
+  top: 25em;
+right: -30em;
+  width: 38vw;
+  color: white;
+  
+  line-height: 3em;
+  font-family: 'Kalam', cursive;
+}
+.jupiter-moon-img{
+  position: relative;
+  top: 50em;
+  mix-blend-mode: plus-lighter;
+}
+.jupiter-moon-des{
+  position: relative;
+  top: 50em;
+  
+  width: 40vw;
+  color: white;
+  
+  line-height: 3em;
+  font-family: 'Kalam', cursive;
+  
+}
+.jupiter-moon-container{
+  margin-bottom: 40em;
+  display: flex;
+}
+.jupiter-moon1-h1{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 40rem;
+  font-family: 'Kalam', cursive;
+  
+}
+
+/* =========saturn-moon-css========== */
+
+.saturn-moon-upper-body{
+  background: #000;
+  height: 95vh;
+
+}
+.saturn-moon-tit{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -41rem;
+  font-family: 'Kalam', cursive;
+}
+.saturn-moon-tit-des{
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: -40rem;
+ 
+  width: 30rem;
+
+  right: -25em;
+  font-family: 'Kalam', cursive;
+  line-height: 4vh;
+}
+#saturn-moon-img{
+
+  position: relative;
+
+  width: 60vw;
+  filter: contrast(130%);
+  height: 95vh;
+background-image: url(https://wallpaperaccess.com/full/17493.jpg);
+background-size: 100vw 100vh;
+}
+.saturn-moon-lower-body{
+  height: 550em;
+  background-size: 100vw 70em;
+  position: relative;
+  background-repeat: repeat-y;
+  top: 0.2vh;
+
+  background-image: url(https://images8.alphacoders.com/825/825559.jpg);
+}
+.abt-tit-sat{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 13rem;
+  font-family: 'Kalam', cursive;
+}
+.abt-des-sat{
+  position: relative;
+  top: 18em;
+
+  width: 38vw;
+  color: white;
+  
+  line-height: 3em;
+  font-family: 'Kalam', cursive;
+}
+.saturn-moons-list-img{
+  height:150vh;
+  position: relative;
+  right:-20em;
+  /* width: 60vw; */
+  top: 40em;
+  margin-bottom: 10em;
+}
+
+.saturn-moon-img{
+  position: relative;
+  top: 50em;
+  /* mix-blend-mode: lighten; */
+}
+.saturn-moon-container{
+  margin-bottom: 40em;
+  display: flex;
+}
+.saturn-moon1-h1{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 40rem;
+  font-family: 'Kalam', cursive;
+  
+}
+.saturn-moon-des{
+  position: relative;
+  top: 50em;
+  
+  width: 40vw;
+  color: white;
+  
+  line-height: 3em;
+  font-family: 'Kalam', cursive;
+  
+}
+
+/* =========uranus-moon-css========== */
+.uranus-moon-upper-body{
+  background: #000;
+  height: 95vh;
+
+}
+.uranus-moon-tit{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -44rem;
+  font-family: 'Kalam', cursive;
+}
+.uranus-moon-tit-des{
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: -43rem;
+ 
+  width: 30rem;
+
+  right: -25em;
+  font-family: 'Kalam', cursive;
+  line-height: 4vh;
+}
+#uranus-moon-img{
+
+  position: relative;
+
+  width: 60vw;
+  filter: contrast(130%);
+  height: 95vh;
+background-image: url(https://wallpaperaccess.com/full/17493.jpg);
+background-size: 100vw 100vh;
+}
+
+.uranus-moon-lower-body{
+  height: 580em;
+  background-size: 100vw 50em;
+  position: relative;
+  background-repeat: repeat-y;
+  top: 0.2vh;
+
+  background-image: url(https://i.pinimg.com/originals/36/fd/39/36fd39fd111528893623c10f4bbd60af.jpg);
+}
+.abt-tit-ura{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 13rem;
+  font-family: 'Kalam', cursive;
+}
+.abt-des-ura{
+  position: relative;
+  top: 18em;
+
+  width: 38vw;
+  color: white;
+  
+  line-height: 3em;
+  font-family: 'Kalam', cursive;
+}
+
+.saturn-all-moon-h2{
+  color: white;
+  position: relative;
+  top: 85vh;
+  font-family: 'Kalam', cursive;
+  display: flex;
+  justify-content: center;
+  height: 8vh;
+  z-index: 1;
+  font-size: 3vh;
+ 
+  letter-spacing: 0.3vh;
+}
+
+#ura-contain{
+  position: relative;
+  top: 110vh;
+  z-index: 1;
+}
+
+/* =========uranus-moon-css========== */
+.neptune-moon-upper-body{
+  background: #000;
+  height: 115vh;
+
+}
+.neptune-moon-tit{
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -53rem;
+  font-family: 'Kalam', cursive;
+}
+.neptune-moon-tit-des{
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: -49rem;
+ 
+  width: 30rem;
+
+  right: 25em;
+  font-family: 'Kalam', cursive;
+  line-height: 4vh;
+}
+#neptune-moon-img{
+
+  position: relative;
+
+  width: 60vw;
+  filter: contrast(160%);
+  height: 115vh;
+  right: -38em;
+background-image: url(https://wallpaperaccess.com/full/17493.jpg);
+background-size: 100vw 100vh;
+}
+
+.neptune-moon-lower-body{
+  height: 480em;
+  background-size: 100vw 50em;
+  position: relative;
+  background-repeat: repeat-y;
+  top: 0.2vh;
+
+  background-image: url(https://t3.ftcdn.net/jpg/05/44/87/54/360_F_544875466_QsrHVa8G2pn94PcVQ7nU2sBJ3srNLnOk.jpg);
+}
