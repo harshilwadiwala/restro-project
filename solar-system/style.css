@@ -1,1626 +1,1895 @@
-.solar-body{
-    background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-
-   
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --blue:rgb(5, 10, 44);
+    --white:#eee;
+    --yellow:#FFE205;
+    --light-blue: #1092CF;
+    --light-yellow:#f3f360;
 }
 
-.sun img{
-    height: 25vh;
-   position: relative;
-   top: 23vh;
-   right: -70vh;
-   /* mix-blend-mode:difference; */
-   
-   filter: drop-shadow(2px -1px 33px red);
-}
-.mercury img{
-    position: relative;
-   top: 51vh;
-   right: -110vh;
-   /* mix-blend-mode: exclusion; */
-   animation: orbit 14s infinite ease-in-out;
-   z-index: 1;
-   height: 5vh;
-   position: absolute;
-   left: 34rem;
-   filter: drop-shadow(5px -1px 5px rgb(174, 52, 52));
-
-}
-.venus img{
-   height: 6vh;
-   animation: orbit_ven 16s infinite ease-in-out;
-   z-index: 1;
-   filter: drop-shadow(5px -1px 5px rgb(174, 52, 52));
-   position: absolute;
-   left: 31rem;
-   top: 58vh;
-}
-.earth img{
-    height: 7vh;
-    animation: orbit_ear 19s infinite ease-in-out;
-    z-index: 1;
-    position: absolute;
-    filter: drop-shadow(5px -1px 5px rgb(30, 12, 218));
-    left: 27rem;
-    top: 51vh;
-}
-
- .mars img{
-    height: 5.5vh;
-    animation: orbit_mar 22s infinite ease-in-out;
-    filter: drop-shadow(5px -1px 5px rgb(201, 15, 15));
-    z-index: 1;
-    position: absolute;
-    left: 23rem;
-    top: 59vh;
- }
- .jupiter img{
-    height: 17vh;
-    animation: orbit_jup 34s infinite ease-in-out;
-    filter: drop-shadow(8px -1px 5px rgba(172, 122, 6, 0.634));
-    z-index: 1;
-    position: absolute;
-    left: 12rem;
-    top: 43vh;
- }
- .saturn img{
-    height: 15vh;
-    animation: orbit_sat 34s 2s infinite ease-in-out;
-    filter: drop-shadow(8px -1px 5px rgba(238, 192, 84, 0.634));
-    z-index: 1;
-    position: absolute;
-    left: 8rem;
-    top: 56vh;
- }
- .uranus img{
-    height: 11vh;
-    animation: orbit_ura 48s 1s infinite ease-in-out;
-    filter: drop-shadow(8px -1px 5px rgb(55, 178, 178));
-    z-index: 1;
-    position: absolute;
-    left: 5rem;
-    top: 50vh;
- }
- .neptune img{
-    height: 8vh;
-   
-    animation: orbit_nep 50s 4s infinite ease-in-out;
-    filter: drop-shadow(8px -1px 5px rgb(194, 194, 197));
-    z-index: 1;
-    position: absolute;
-    left: 0rem;
-    top: 50vh;
- }
- 
-@keyframes orbit{
-    49%{z-index: 1;}
-   
-     50%{
-         left: 58em ;
-         z-index: -1;
-         filter: drop-shadow(-5px -1px 5px rgb(174, 52, 52));
-     }
-     99%{z-index: -3;
-      /* filter: drop-shadow(0px -1px 5px red); */
-    }
-     100%{
-         left: 34em;
-         z-index: 1;
-         filter: drop-shadow(5px -1px 5px rgb(174, 52, 52));
-     } 
-    
-  }
-
-  @keyframes orbit_ven{
-    49%{z-index: 1;}
-     50%{
-         left: 67em ;
-         z-index: -1;
-         filter: drop-shadow(-5px -1px 5px rgb(174, 52, 52));
-     }
-     99%{z-index: -3;}
-     100%{
-         left: 31em;
-         z-index: 1;
-         filter: drop-shadow(5px -1px 5px rgb(174, 52, 52));
-     } 
-    
-  }
-  @keyframes orbit_ear{
-    49%{z-index: 1;}
-     50%{
-         left: 74em ;
-         z-index: -1;
-         filter: drop-shadow(-5px -1px 5px rgb(30, 12, 218))
-     }
-     99%{z-index: -3;}
-     100%{
-         left: 27em;
-         z-index: 1;
-         filter: drop-shadow(5px -1px 5px rgb(30, 12, 218))
-     } 
-    
-  }
-
-  @keyframes orbit_mar{
-    49%{z-index: 1;}
-     50%{
-         left: 77em ;
-         z-index: -1;
-         filter: drop-shadow(-5px -1px 5px rgb(201, 15, 15));
-     }
-     99%{z-index: -3;}
-     100%{
-         left: 23em;
-         z-index: 1;
-         filter: drop-shadow(5px -1px 5px rgb(201, 15, 15));
-     } 
-    
-  }
-  
-  @keyframes orbit_jup{
-    49%{z-index: 1;}
-     50%{
-         left: 76em ;
-         z-index: -1;
-         filter: drop-shadow(-8px -1px 5px rgba(172, 122, 6, 0.634));
-     }
-     99%{z-index: -3;}
-     100%{
-         left: 12em;
-         z-index: 1;
-         filter: drop-shadow(8px -1px 5px rgba(172, 122, 6, 0.634));
-     } 
-    
-  }
-  @keyframes orbit_sat{
-    49%{z-index: 1;}
-     50%{
-         left: 81em ;
-         z-index: -1;
-         filter: drop-shadow(-8px -1px 5px rgba(238, 192, 84, 0.634));
-     }
-     99%{z-index: -3;}
-     100%{
-         left: 8em;
-         z-index: 1;
-         filter: drop-shadow(8px -1px 5px rgba(238, 192, 84, 0.634));
-     } 
-    
-  }
-
-  @keyframes orbit_ura{
-    49%{z-index: 1;}
-     50%{
-         left: 86em ;
-         z-index: -1;
-         filter: drop-shadow(-8px -1px 5px rgb(55, 178, 178));
-     }
-     99%{z-index: -3;}
-     100%{
-         left: 5em;
-         z-index: 1;
-         filter: drop-shadow(8px -1px 5px rgb(55, 178, 178));
-     } 
-    
-  }
-  @keyframes orbit_nep{
-    49%{z-index: 1;}
-     50%{
-         left: 90em ;
-         z-index: -1;
-         filter: drop-shadow(-8px -1px 5px rgb(194, 194, 197));
-     }
-     99%{z-index: -3;}
-     100%{
-         left: 0em;
-         z-index: 1;
-         filter: drop-shadow(8px -1px 5px rgb(194, 194, 197));
-     } 
-    
-  }
- 
-/* clock */
-  *{
+*{
     margin: 0;
     padding: 0;
-  }
-  
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    transition: all .3s ease-in-out;
+}
 
-  
-  .datetime{
-    color: #fff;
-    background: #10101E;
-    font-family: "Segoe UI", sans-serif;
-    width: 340px;
-    padding: 15px 10px;
-   
-    border-radius: 5px;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
-    transition: 0.5s;
-    transition-property: background, box-shadow;
-    position: relative;
-    right: -70vh;
-    top: 5vh;
-    background: none;
-  }
-  
-  .datetime:hover{
-    /* background-image: url(https://media.istockphoto.com/id/1138288769/photo/light-purple-defocused-blurred-motion-abstract-background.webp?b=1&s=170667a&w=0&k=20&c=AcHwzfWDDqno9QWii9GgQiNfhDwYacQlprzksbkkmMk=); */
-    box-shadow: 1px 1px 15px 20px rgb(28, 28, 196);
-  }
-  
-  .date{
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 3px;
-  }
-  
-  .time{
-    font-size: 60px;
+*::selection{
+    background: var(--white);
+    color: var(--blue);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.header{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1000;
     display: flex;
-    justify-content: center;
     align-items: center;
-  }
-  
-  .time span:not(:last-child){
-    position: relative;
-    margin: 0 6px;
-    font-weight: 600;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    background: var(--blue);
+    color: var(--white);
+}
+
+section{
+    padding: 7rem 9%;
+}
+
+#menu-bar{
+    font-size: 2rem;
+    cursor: pointer;
+    border: .1rem solid #eee8e8;
+    padding: .5rem;
+    display: none;
+}
+
+#menu-bar:hover{
+    transform: scale(1.1);
+}
+
+
+button{
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+    color: #b3d4fc;
+    background-color: var(--blue);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: 900;
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.674);
+}
+
+button:hover{
+    color: var(--blue);
+    background: #fcfeff91;
+    transition: .7s ease-in;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: black;
+}
+
+.info .box{
+    padding: 2rem;
     text-align: center;
-    letter-spacing: 3px;
-  }
-  
-  .time span:last-child{
+}
+
+.info .box h3{
+    color: #ce9431;
+    font-size: 2.2rem;
+}
+
+.info .box p{
+    color: var(--white);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+/* heading  */
+.heading{
+    text-align: center;
+    padding:2rem 0;
+}
+
+.heading span{
+    color: var(--blue);
+    background: var(--light-blue);
+    font-size: 3.5rem;
+    font-weight: 900;
+    padding: .2rem 1rem;
+    border-radius: .5rem;
+    box-shadow:.5rem 1rem 1.5rem rgba(16, 147, 207, 0.535);
+}
+
+.heading .space{
+    background: none;
+    box-shadow: none;
+}
+
+/* header section */
+.header .logo{
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.header .icon{
+    color: var(--yellow);
+}
+
+.header .solar{
+    width: 3.5rem;
+    color: var(--white);
+}
+
+.header .logo:hover{
+    color: var(--light-blue);
+}
+
+.header .navbar ul li{
+    position: relative;
+    float: left;
+    margin: .5rem 1rem;
+}
+
+.header .navbar ul li a{
+    display: block;
+    font-size: 1.9rem;
+    color: var(--white);
+    padding: 1.5rem;
+}
+
+.header .navbar ul li a:before,
+.header .navbar ul li a:after{
+    content:"";
+    position: absolute;
+    height: .1rem;
+    width: 0;
+    background-color: var(--light-blue);
+    transition: .5s;
+}
+
+.header .navbar ul li a:after{
+    left: 0;
+    bottom:8px;
+}
+
+.header .navbar ul li a:before{
+    right: 0;
+    top: 8px;
+}
+
+.header .navbar ul li a:hover{
+    color: var(--yellow);
+}
+
+.header .navbar ul li a:hover:after,
+.header .navbar ul li a:hover:before{
+    width: 100%;
+}
+
+.header .navbar ul li ul{
+    position: absolute;
+    left: -50%;
+    width: 28rem;
+    background: var(--blue);
+    display: none;
+}
+
+.header .navbar ul li ul li{
+    width: 100%;
+}
+
+.header .navbar ul li:hover ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* home section  */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    background: url(images/home.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content h2{
+    font-size: 5.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    color: var(--white);
+    padding: 1.5rem;
+}
+
+.home .content span{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+/* facts */
+.facts .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(33%,1fr));
+    background: #ffffe6;
+    color: var(--blue);
+}
+
+.facts .box-container .box{
+    border-right: .1rem solid #999905;
+    border-bottom: .1rem solid #999905;
+    padding: 5rem;
+}
+
+.facts .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: #21aff1;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+}
+
+.facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(31, 21, 143);
+}
+
+.facts .box-container .box p{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+/* News */
+.news .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(33%,1fr));
+    background: #ffffe6;
+    color: var(--blue);
+}
+
+.news .box-container .box{
+    border-right: .1rem solid #999905;
+    border-bottom: .1rem solid #999905;
+    padding: 5rem;
+}
+
+.news .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: #21aff1;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+}
+
+.news .box-container .box p{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+/* Planets */
+.planets{
+    background: url(images/sun-1506019_640.jpg) no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+}
+
+.planets .content h2{
+    color: var(--white);
+    font-size: 5rem;
+}
+
+.planets .content p{
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+.planet-content{
+    width: 100%;
+    background: black;
+}
+
+.planet-content p{
+    color: var(--white);
+    padding: 2rem;
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.all-planet .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(48%,1fr));
+    gap: 1rem;
+}
+
+.all-planet .box-container .box{
+    padding: 1.5rem;
+    background-color: rgb(2, 2, 39);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1em;
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.674);
+}
+
+.all-planet .box-container .box .image{
+    padding: 1rem;
+}
+
+.all-planet .box-container .box .image img{
+    height: 15rem;
+    mix-blend-mode:lighten;
+}
+
+.all-planet .box-container .box .image:hover img{
+    transform: scale(1.2);
+}
+
+.all-planet .box-container .box .content{
+    padding-left: 3rem;
+}
+
+.all-planet .box-container .box .content h2{
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.all-planet .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+/* missions */
+.mission-home{
+    background: url(images/mission.jpg) no-repeat;
+    margin-top: 7rem;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items:center;
+    justify-content: left;
+}
+
+.mission-home .content{
+    width: 50rem;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.543);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.543);
+}
+
+.mission-home .content:hover{
+    transform: scale(1.04);
+}
+
+.mission-home .content h3{
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.mission-home .content p{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.mission-contents{
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+}
+
+.mission-contents p{
+    padding-bottom: 2rem;
+    color: var(--blue);
+}
+
+.missions{
+    background: url(images/background.jpg);
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.missions .box-container {
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    gap: 1rem;
    
-    font-size: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 10px;
-    padding: 0 5px;
-    border-radius: 3px;
-  }
-       
-  .datetime :hover.time span:last-child{
-    background: #3013d3;
-  }
-
- /* ======COMETS CSS ========= */
-
- .comet-body{
-  background-image: url(comet.jpg);
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  height: 140vh;
-  color:white;
-  position: relative;
-  top: 4vh;
- 
-}
-.container{
-/* background-image: url(https://w0.peakpx.com/wallpaper/766/725/HD-wallpaper-blurred-colorful-vertical-portrait-display-blue-gradient-thumbnail.jpg); */
-background-size: cover;
-background-repeat: no-repeat;
-margin: 0;
-padding: 0;
-}
-.comet-h1,.key-sci-tar{
-  display: flex;
-  text-align: center;
- justify-content: center;
- position: relative;
- top: 6vh;
- letter-spacing: 1vh;
-  font-family: 'Rubik Wet Paint', cursive;
 }
 
-.flip-box a{
-  font-family: 'Kalam', cursive;
-  text-decoration:none;
-  color: whitesmoke;
-  font-weight: 600;
-  position: relative;
-  top: 4vh;
- 
-}
-.sub-container a:hover{
-text-decoration: underline;
-/* filter: drop-shadow(15px 15px 200px white inverted(60%)); */
-
-}
-.container.sub-container .flip-box h4{
-  font-size: 2.3vh;
-  color: #405ee2;
-  position: relative;
-  top: 6vh;
-  right: -7vh;
-}
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
-  display: flex;
-  justify-content: center;
-  top: 7vh;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+.missions .box-container .box{
+    margin: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: .5rem .5rem 1rem 1rem rgba(255, 255, 255, 0.63);
+    border-radius: .7rem;
 }
 
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 20%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: -2vh;
-  left: 78vh;
-  background-color: #0087ca;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+.missions .box-container .box .image{
+    width: 100%;
+    height:30rem;
 }
 
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.missions .box-container .box .image img{
+    width: 100%;
+    height: 100%;
 }
 
-
-.comet-body{
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.flip-box {
-  position: relative;
-  top: -10vh;
-  background-color: transparent;
-  width: 20vw;
-  height: 30vh;
-  
-  perspective: 1000px;
-  border-radius: 3vh;
-}
-
-.key-sci-tar{
-  
-  color: white;
-  position: relative;
-  top: 30vh;
-  right: -1vh;
-  height: 8vh;
-  z-index: 1;
-  font-size: 3vh;
-}
-.key-sci-tar-img{
-  
-  position: relative;
-  right: -60vh;
-  height: 26vh;
-  width: 75vh;
- top:9vh;
-  
-}
-.comet-des{
-  position: relative;
-  right: -60vh;
-  top: 9vh;
-  width: 45vh;
-  font-family: 'Kalam', cursive;
-  color: white;
-
-}
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-  border-radius: 5vh;
-}
-
-.flip-box-back {
-  background-image: url(https://img.freepik.com/premium-vector/gradient-background_1159-5231.jpg?size=626&ext=jpg&ga=GA1.2.1377789698.1684438917&semt=ais);
-  height: 30vh;
- 
-  transform: rotateY(180deg);
-  width: 40vh;
-  border-radius: 5vh;
-}
-p{
+.missions .box-container .box .image .text{
+    position: relative;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.63);
     color: white;
-    width: 24vh;
-    margin-left: auto;
-margin-right: auto;
-position: relative;
-top: 2vh;
-line-height: 3vh;
-letter-spacing: 2px;
-
-}
-.sub-container{
-  display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(10%,1fr));
-  gap: 0vw;
- margin-left: 9vh;
- margin-right: 9vh;
- margin-top: 0%;
- margin-bottom: 5vh;
-  padding: 2vh;
- 
- 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-130%);
 }
 
-.flip-box-front img{
-      height: 30vh;
-      width: 20vw;
-      border-radius: 5vh;
-}
-.h1{
-  position: relative;
-  right: -8vh;
-}
-.h2{
-  position: relative;
-  right: -13vh;
-}
-.h3{
-  position: relative;
-  right: -15vh;
-  
+.missions .box-container .box .image:hover .text{
+    transform: translateY(0);
+    transition: .5s ease-in-out;
 }
 
-.h4{
-  position: relative;
-  right: -16vh;
-}
-.h5{
-  position: relative;
-  right: -10vh;
- 
- 
-}
-.h6{
-  position: relative;
-  right: -13vh;
-}
-.h7{
-  position: relative;
-  right: -16vh;
+.missions .box-container .box .image .text h3{
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1.7rem;
 }
 
-.h8{
-  position: relative;
-  right: -10vh;
+.missions .box-container .box .image .text p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: 1.3rem;
 }
 
-.h9{
-  position: relative;
-  right: -8vh;
-}
-.h10{
-  position: relative;
-  right: -10vh;
-}
-.h11{
-  position: relative;
-  right: -13vh;
-}
-.h12{
-  position: relative;
-  right: -10vh;
+/* eclipse */
+.eclipse-home{
+    min-height: 100vh;
+    width: 100%;
+    background: url(images/eclipse.gif) no-repeat;
+    background-size: cover;
+    margin-top: 5rem;
 }
 
-.h13{
-  position: relative;
-  right: -10vh;
+.eclipse-home .name{
+    font-size: 5rem;
+    color: var(--white);
+    text-align: center;
 }
 
-.h14{
-  position: relative;
-  right: -10vh;
-}
-.h15{
-  position: relative;
-  right: -17vh;
-}
-.h16{
-  position: relative;
-  right: -14vh;
-}
-.h17{
-  position: relative;
-  right: -10vh;
-}
-h4{
-  color: #0e13bc;
-  font-family: 'Kalam', cursive;
-  position: relative;
-  top: 2vh;
-}
-#thread1{
-  position: relative;
-  top: 8vh;
-  right: -10vh;
-  width: 88%;
-  height: 3px;
-  border: none;
-  background: rgb(48, 8, 8);
-  -webkit-animation: thread2 8s infinite;
-  -moz-animation:    thread2 8s infinite;
-  -o-animation:      thread2 8s infinite;
-  animation:         thread2 8s infinite;
-}
-#thread6{
-  position: relative;
-  top: -5vh;
-  right: -10vh;
-  width: 88%;
-  height: 3px;
-  border: none;
-  background: rgb(48, 8, 8);
-  -webkit-animation: thread2 6s infinite;
-  -moz-animation:    thread2 6s infinite;
-  -o-animation:      thread2 6s infinite;
-  animation:         thread2 6s infinite;	
+.eclipse-content{
+    background: url(images/background.jpg);
+    width: 100%;
 }
 
-@keyframes thread2 {
-  0%   { width: 88%; }
-  50% { width: 88%; }
-  80% { width: 0px;}
-  100%{ width:88%;}
-}
-.last{
-  position: relative;
-  top: 20vh;
-  width: 10%;
-  right: -40vh;
-  background: white;
+.eclipse-content .para p{
+    color: var(--white);
+    font-size: 2rem;
+    padding-bottom: 3rem;
 }
 
-/* ====METEORS AND METOERITES CSS===== */
-
-.meteors-body{
-  height: 20vh;
-  background: #000;
-  z-index: 1;
-}
-.met-lower-body{
-  
-  background-image: url(https://wallpaperaccess.com/full/1745055.jpg);
-  background-repeat:repeat-y;
-  background-size: 100vw 50vh;
-  height: 420vh;
-  position: relative;
-  top: -60vh;
-
-}
- .meteors-2{
-  height: 30vh;
-  width: 20vw;
-  border-radius: 5vh;
- }
-
- .image-container {
-  display: inline-block;
-  position: relative;
+.sl-container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(48%,1fr));
+    gap: 2rem;
+    padding-top: 3rem;
 }
 
-#image {
-  width: 95vw;
-  position: relative;
-  right: -5vh;
-  height: 80vh;
-  transition: transform 0.3s ease;
+.sl-container .box-container .box{
+    overflow: hidden;
+    padding: 2rem;
+    background: #ddd;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.302);
 }
 
-.met-title{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -75vh;
-  color: whitesmoke;
-  font-family: 'Lobster Two', cursive;
-  letter-spacing: 0.6vh;
-}
-.meteors-des{
-  color: white;
- position: relative;
- right: -60vh;
- width: 25vw;
- top: -70vh;
- display: flex;
- text-align: center;
-}
-.hover-underline-animation-2 {
-  display: inline-block;
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  top: 7vh;
-  text-decoration: none;
-  font-family: 'Lobster', cursive;
-  position: relative;top: -70vh; 
-  font-size: larger;
-  color: yellow;
+.sl-container .box-container .box h2{
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 1.5rem;
+    color: rgb(6, 12, 72);
 }
 
-.hover-underline-animation-2:after {
-  content: '';
-  position: absolute;
-  width: 20%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: -2vh;
-  left: 78vh;
-  background-color: yellow;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+.sl-container .box-container .box img{
+    width: 47rem;
+    border-radius: 1rem;
+    mix-blend-mode: darken;
 }
 
-.hover-underline-animation-2:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-.Meteor-Showers-h2{
-  color: white;
-  position: relative;
-  top: 20vh;
-  font-family: 'Rubik Wet Paint', cursive;
-  display: flex;
-  justify-content: center;
-  height: 8vh;
-  z-index: 1;
-  font-size: 3vh;
- 
-  letter-spacing: 0.3vh;
-}
-#met-contain{
-  position: relative;
-  top: 50vh;
-  z-index: 1;
-}
-.meteor-shower-faq1{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 60vh;
-  color: white;
-  font-family: 'Preahvihear', sans-serif;
-  letter-spacing: 0.3vh;
-  z-index: 1;
-}
-.meteor-shower-des{
-  position: relative;
-  top: 70vh;
-  color: white;
-  width: 40vw;
-  font-size: large;
-  font-family: 'Lobster Two', cursive;
-  line-height: 4vh;
-  z-index: 1;
-
-}
-.meteor-shower-des2{
-  position: relative;
-  top: 90vh;
-  width: 30vw;
-  color: white;
-  font-size: large;
-  font-family: 'Lobster Two', cursive;
-  line-height: 4vh;
-  z-index: 1;
-}
-.meteor-shower-img{
-  width: 90vw;
-  height: 90vh;
-  position: relative;
-  top:80vh;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  right: -10vh;
-
-  visibility: visible;
-  overflow: hidden;
-  z-index: 1;
-  /* filter: contrast(200%); */
-  
-  /* border-radius: 10vh; */
- 
-}
-.meteor-shower-faq2{
-  color: white;
-  display: flex;
-  justify-content: center;
-  font-family: 'Preahvihear', sans-serif;
-  letter-spacing: 0.3vh;
-  position: relative;
-  top:85vh;
-  z-index: 1;
-}
-.meteor-story{
-  display: inline-block;
- 
-  display: flex;
-  justify-content: center;
-  
-  text-decoration: none;
-  font-family: 'Lobster', cursive;
-  position: relative;
-  top: 100vh; 
-  left: -2vw;
-  font-size: larger;
-  color: yellow;
+.sl-container .box-container .box p{
+    font-size: 1.7rem;
+    color: var(--blue);
+    padding: 1rem;
 }
 
-.meteor-story:after {
-  content: '';
-  position: absolute;
-  width: 10%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: -2vh;
-  left: 89vh;
-  background-color: yellow;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+/* sun */
+.sun-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 90vh;
 }
-.meteor-story:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-.splash-paint-img{
- position: relative;
- top: -70vh;
- right: -35vw;
-}
-#upperhr{
-  position: relative;
-  top: 26vh;
-  right: -10vh;
-  width: 88%;
-  height: 3px;
-  border: none;
-  background:whitesmoke;
-  -webkit-animation: thread2 8s infinite;
-  -moz-animation:    thread2 8s infinite;
-  -o-animation:      thread2 8s infinite;
-  animation:         thread2 8s infinite;
-}
-#low-hr{
-  position: relative;
-  top: 110vh;
-  right: -10vh;
-  width: 88%;
-  height: 3px;
-  border: none;
-  background: whitesmoke;
-  -webkit-animation: thread2 6s infinite;
-  -moz-animation:    thread2 6s infinite;
-  -o-animation:      thread2 6s infinite;
-  animation:         thread2 6s infinite;	
-}
-#mid-hr{
-  position: relative;
-  top:50vh;
-  right: -10vh;
-  width: 88%;
-  height: 3px;
-  border: none;
-  background: whitesmoke;
-  -webkit-animation: thread2 6s infinite;
-  -moz-animation:    thread2 6s infinite;
-  -o-animation:      thread2 6s infinite;
-  animation:         thread2 6s infinite;	
-}
-.last2{
-  position: relative;
-  top: 60vh;
-  width: 1%;
-
-}
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
- border-radius: 5vh;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.sun-home img{
+    mix-blend-mode: lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    opacity: 1;
+    width: 33rem;
 }
 
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-  box-shadow: 0px 0px 50px rgb(0, 76, 255) ;
-  
+.sun-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem
 }
 
-.flip-box-front, .flip-box-back-2 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: none;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+.sun-home .content:hover{
+    transform: scale(1.05);
 }
 
-.flip-box-front {
-  background-color: #bbb;
-  color: white;
-  border-radius: 5vh;
-  border: 1px solid rgb(122, 152, 233);
-}
-.flip-box-back-2{
-  /* background-image: url(https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?w=360); */
-  
-  height: 30vh;
-  background-color: rgb(5, 10, 44);
-  transform: rotateY(180deg);
-  width: 40vh;
-  border-radius: 5vh;
-}
-.p1{
-  color: white;
-}
-.flip-box-back-2 .a{
-  color: white;
+.sun-home .content h2{
+    font-size: 15rem;
+    font-weight: 900;
 }
 
-/* ==========astro css========== */
-
-.astro-img{
-  width: 50vw;
-  height: 80vh;
-  position: relative;
-  left: 10vh;
-  background: #000;
+.sun-home .content p{
+    font-size: 2.5rem;
 }
 
-.astro-body{
-  height: 300vh;
-}
-.astro-lower-body{
-  
-  background-image: url(https://img.rawpixel.com/private/static/images/website/2022-05/fl44341686155-image-ktxraz3m.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=d3a6c77acd4198b1142ec8719ec0a1be);
-  background-repeat:repeat-y;
-  background-size: 100vw 50vh;
-  height: 200vh;
-  position: relative;
-  top: -3vh;
-
-}
-.astro-des{
-  color: white;
-  width: 30vw;
-  display: flex;
-  align-items: center;
-  line-height: 4vh;
-  font-family: 'Lobster Two', cursive;
-}
-.astro-content{
-  display: flex;
-  background: #000;
-  height: 90vh;
-}
-.astro-tit{
-  color: white;
-  z-index: 1;
-  margin-top: 4vh;
-  font-family: 'Preahvihear', sans-serif;
-  background: none;
-}
-#astro-know-more{
-  position: relative;
-  top: -10vh;
-}
-#astro-10{
-  position: relative;
-  right: 15vh;
-}
-#astro-11{
-  position: relative;
-  right: 30vh;
-}
-#astro-sub-contain{
-  position: relative;
-  top: 40vh;
-}
-.astro-key-sci-tar{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 15vh;
-  font-family: 'Preahvihear', sans-serif;
-  color: #405ee2;
-}
-.astro-faq{
-  color: white;
-  position: relative;
-  top: 40vh;
-  display: flex;
-  justify-content: center;
-  font-family: 'Preahvihear', sans-serif;
-}
-.astro-faq-des{
-  color: white;
-  position: relative;
-  top: 50vh;
-  font-family: 'Preahvihear', sans-serif;
-  width: 20vw;
+.sun-content{
+    background-color: black;
+    color: white;
+    width: 100%;
 }
 
-/* ========moon-earth-css========== */
-.moon_main{
-
-  height: 100vh;
-  position: relative;
-  right: -80vh;
-  top: 10vh;
-}
-.earth_moon_upper-body{
-  background: #000;
-  display: flex;
-  position: relative;
-  /* top: 10vh; */
-  height: 110vh;
-}
-.ear-moon-h1-tit{
-  color: white;
-  font-size: 8vh;
-  position: relative;
-  top: 15vh;
-  right: 85vh;
-  font-family: 'Kalam', cursive;
-}
-.ear-moon-des-tit{
-  color: white;
- 
-  position: relative;
-  top: 35vh;
-  width:25vw;
-  /* letter-spacing: 0.6vh; */
-  line-height: 4vh;
-  right: 130vh;
-  display: flex;
-  text-align: center;
-  font-family: 'Kalam', cursive;
+.sun-content p{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
 }
 
-.dist{
-  color:white;
-  
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  right: 63vh;
-  top: 1vh;
+.sun-content .sun-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
 }
-.visitor-head{
-  position: relative;
-  right: -80vh;
+
+.sun-content .sun-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
 }
-.dist-head{
-  position: relative;
-  right: -20vh;
-  color: rgb(132, 167, 224);
+
+
+.sun-facts .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background: #e9c29a;
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
 }
-.dist-earth{
+
+.sun-facts .box-container .box{
+    border-right: .1rem solid #ff7b00;
+    border-bottom: .1rem solid #ff7b00;
+    padding: 5rem;
+}
+
+.sun-facts .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: #ef9c60;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: rgb(184, 77, 0);
+}
+
+.sun-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(184, 77, 0);
+}
+
+.sun-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: rgb(184, 94, 30);
+}
+
+
+
+/* mercury */
+
+.mercury-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 100vh;
+}
+
+.mercury-home img{
+    mix-blend-mode: lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    opacity: 1;
+    width: 28rem;
+    padding: 0rem 1.5rem;
+}
+
+.mercury-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem
+}
+
+.mercury-home .content:hover{
+    transform: scale(1.05);
+}
+
+.mercury-home .content h2{
+    font-size: 12rem;
+    font-weight: 900;
+}
+
+.mercury-home .content p{
+    font-size: 2.2rem;
+}
+
+.mercury-content{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.mercury-content p{
+    font-size: 2.1rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.mercury-content .mercury-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
+}
+
+.mercury-content .mercury-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
+}
+
+.mercury-facts .heading span{
+    background: #8485c0;
+    color:rgb(68, 69, 117);
+    box-shadow:.5rem 1rem 1.5rem #3a3b607c;
+}
+
+.mercury-facts .heading .space{
+    background: none;
+    box-shadow: none;
+}
+
+.mercury-facts  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background: #a9b1cc;
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
+}
+
+.mercury-facts  .box-container .box{
+    border-right: .1rem solid #262839;
+    border-bottom: .1rem solid #262839;
+    padding: 5rem;
+}
+
+.mercury-facts  .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: #8485c0;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: rgb(68, 69, 117);
+}
+
+.mercury-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(68, 69, 117);
+}
+
+.mercury-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: rgb(120, 119, 172);
+}
+
+
+
+/* venus */
+.venus-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 100vh;
+}
+
+.venus-home img{
+    mix-blend-mode: lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    opacity: 1;
+    width: 28rem;
+    padding: 0rem 1.5rem;
+}
+
+.venus-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.venus-home .content:hover{
+    transform: scale(1.05);
+}
+
+.venus-home .content h2{
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.venus-home .content p{
+    font-size: 1.7rem;
+}
+
+.venus-content{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.venus-content p{
+    font-size: 2.1rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.venus-content .venus-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
+}
+
+.venus-content .venus-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
+}
+
+.venus-facts .heading span{
+    background: #f8e6a5;
+    color:rgb(61, 56, 33);
+    box-shadow:.5rem 1rem 1.5rem rgba(138, 126, 86, 0.535);
+}
+
+.venus-facts .heading .space{
+    background: none;
+    box-shadow: none;
+}
+
+.venus-facts  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background: #f8e6a5;
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
+}
+
+.venus-facts  .box-container .box{
+    border-right: .1rem solid #5c5a3b;
+    border-bottom: .1rem solid #5c5a3b;
+    padding: 5rem;
+}
+
+.venus-facts  .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: #b7b083;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: rgb(61, 56, 33);
+}
+
+.venus-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(61, 56, 33);
+
+}
+
+.venus-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: rgb(131, 118, 80);
+}
+
+
+/* Earth */
+.earth-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 100vh;
+}
+
+.earth-home img{
+    position: relative;
+    mix-blend-mode: lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    opacity: 1;
+    width: 28rem;
+    padding: 0rem 1.5rem;
+    z-index: 10;
+}
+
+.earth-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.earth-home .content:hover{
+    transform: scale(1.05);
+}
+
+.earth-home .content h2{
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.earth-home .content p{
+    font-size: 1.7rem;
+}
+
+.earth-content{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.earth-content p{
+    font-size: 2.1rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.earth-content .earth-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
+}
+
+.earth-content .earth-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
+}
+
+.earth-facts  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background: #93c5d9;
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
+}
+
+.earth-facts  .box-container .box{
+    border-right: .1rem solid #325060;
+    border-bottom: .1rem solid #325060;
+    padding: 5rem;
+}
+
+.earth-facts  .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: var(--light-blue);
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: rgb(31, 21, 143);
+}
+
+.earth-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(31, 21, 143);
+}
+
+.earth-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: #1092CF;
+}
+
+
+
+/* Mars */
+.mars-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 100vh;
+}
+
+.mars-home img{
+    mix-blend-mode: lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    opacity: 1;
+    width: 28rem;
+    padding: 0rem 1.5rem;
+}
+
+.mars-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.mars-home .content:hover{
+    transform: scale(1.05);
+}
+
+.mars-home .content h2{
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.mars-home .content p{
+    font-size: 1.7rem;
+}
+
+.mars-content{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.mars-content p{
+    font-size: 2.1rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.mars-content .mars-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
+}
+
+.mars-content .mars-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
+}
+
+.mars-facts .heading span{
+    background: #b76a6a;
+    color: #4b1414;
+    box-shadow:.5rem 1rem 1.5rem rgba(114, 60, 60, 0.535);
+}
+
+.mars-facts .heading .space{
+    background: none;
+    box-shadow: none;
+}
+
+.mars-facts  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background: #bb8989;
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
+}
+
+.mars-facts  .box-container .box{
+    border-right: .1rem solid #a21616;
+    border-bottom: .1rem solid #a21616;
+    padding: 5rem;
+}
+
+.mars-facts  .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: #c06868;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: #4b1414;
+}
+
+.mars-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: #4b1414;
+}
+
+.mars-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: #6e3f3f;
+}
+
+
+
+/* Jupiter */
+
+.jupiter-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 100vh;
+}
+
+.jupiter-home img{
+    mix-blend-mode: lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    opacity: 1;
+    width: 28rem;
+    padding: 0rem 1.5rem;
+}
+
+.jupiter-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.jupiter-home .content:hover{
+    transform: scale(1.05);
+}
+
+.jupiter-home .content h2{
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.jupiter-home .content p{
+    font-size: 1.7rem;
+}
+
+.jupiter-content{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.jupiter-content p{
+    font-size: 2.1rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.jupiter-content .jupiter-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
+}
+
+.jupiter-content .jupiter-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
+}
+
+.jupiter-facts .heading span{
+    background: #ffe2b1;
+    color: #ba7805;
+    box-shadow:.5rem 1rem 1.5rem #7d520392;
+}
+
+.jupiter-facts .heading .space{
+    background: none;
+    box-shadow: none;
+}
+
+.jupiter-facts  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background: #ffe2b1;
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
+}
+
+.jupiter-facts  .box-container .box{
+    border-right: .1rem solid #ba7805;
+    border-bottom: .1rem solid #ba7805;
+    padding: 5rem;
+}
+
+.jupiter-facts  .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    font-weight: 900;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: #c3a879;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: #7b5006;
+}
+
+.jupiter-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: #7b5006;
+}
+
+.jupiter-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: #9d7a3d;
+}
+
+
+/* Saturn */
+.saturn-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 100vh;
+}
+
+.saturn-home img{
+    mix-blend-mode: lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    opacity: 1;
+    width: 45rem;
+    padding-left: 2rem;
+}
+
+.saturn-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.saturn-home .content:hover{
+    transform: scale(1.05);
+}
+
+.saturn-home .content h2{
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.saturn-home .content p{
+    font-size: 1.7rem;
+}
+
+.saturn-content{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.saturn-content p{
+    font-size: 2.1rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.saturn-content .saturn-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
+}
+
+.saturn-content .saturn-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
+}
+
+.saturn-facts .heading span{
+    background: rgb(191, 191, 170);
+    color: rgb(65, 65, 52);
+    box-shadow:.5rem 1rem 1.5rem rgba(62, 62, 54, 0.569);
+}
+
+.saturn-facts .heading .space{
+    background: none;
+    box-shadow: none;
+}
+
+.saturn-facts  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background:  rgb(233, 233, 210);
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
+}
+
+.saturn-facts  .box-container .box{
+    border-right: .1rem solid rgb(65, 65, 52);
+    border-bottom: .1rem solid rgb(65, 65, 52);
+    padding: 5rem;
+}
+
+.saturn-facts  .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    font-weight: 900;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: rgb(200, 200, 177);
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: rgb(65, 65, 52);
+}
+
+.saturn-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(65, 65, 52);
+}
+
+.saturn-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: rgb(111, 111, 85);
+}
+
+
+
+/* Uranus */
+.uranus-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 100vh;
+}
+
+.uranus-home img{
+    mix-blend-mode: lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    opacity: 1;
+    width: 40rem;
+    padding-left: 2rem;
+}
+
+.uranus-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.uranus-home .content:hover{
+    transform: scale(1.05);
+}
+
+.uranus-home .content h2{
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.uranus-home .content p{
+    font-size: 1.7rem;
+}
+
+.uranus-content{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.uranus-content p{
+    font-size: 2.1rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.uranus-content .saturnr-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
+}
+
+.uranus-content .uranus-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
+}
+
+.uranus-facts .heading span{
+    background: rgb(141, 196, 196);
+    color: rgb(11, 101, 101);
+    box-shadow:.5rem 1rem 1.5rem rgba(28, 194, 194, 0.44);
+}
+
+.uranus-facts .heading .space{
+    background: none;
+    box-shadow: none;
+}
+
+.uranus-facts  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background:  rgb(141, 196, 196);
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
+    padding: 1rem;
+}
+
+.uranus-facts  .box-container .box{
+    border-right: .1rem solid rgb(11, 101, 101);
+    border-bottom: .1rem solid rgb(11, 101, 101);
+    padding: 3rem;
+}
+
+.uranus-facts  .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    font-weight: 900;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: rgb(123, 166, 166);
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: rgb(11, 101, 101);
+}
+
+.uranus-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(11, 101, 101);
+}
+
+.uranus-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: rgb(75, 93, 93);
+}
+
+
+
+/* Neptune */
+.neptune-home{
+    background: url(images/background.jpg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem ;
+    min-height: 100vh;
+}
+
+.neptune-home img{
+    z-index: 10;
+    mix-blend-mode:lighten;
+    transform: scale(7);
+    animation: shrink 2s ease-in-out forwards;
+    width: 30rem;
+    padding-left: 2rem;
+}
+
+.neptune-home .content{
+    width: 50rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.348);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.neptune-home .content:hover{
+    transform: scale(1.05);
+}
+
+.neptune-home .content h2{
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.neptune-home .content p{
+    font-size: 1.7rem;
+}
+
+.neptune-content{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.neptune-content p{
+    font-size: 2.1rem;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.neptune-content .neptune-btn{
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: .5rem .5rem .5rem rgba(255, 255, 255, 0.533);
+}
+
+.neptune-content .neptune-btn:hover{
+    color: var(--blue);
+    background: var(--light-yellow);
+}
+
+.neptune-facts .heading span{
+    background: rgb(114, 198, 226);
+    color: rgb(11, 20, 101);
+    box-shadow:.5rem 1rem 1.5rem rgba(18, 77, 77, 0.44);
+}
+
+.neptune-facts .heading .space{
+    background: none;
+    box-shadow: none;
+}
+
+.neptune-facts  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    background:  rgb(169, 211, 225);
+    color: var(--blue);
+    box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, 0.48);
+    margin-top: 2rem ;
+    padding: 2rem;
+}
+
+.neptune-facts  .box-container .box{
+    border-right: .1rem solid rgb(11,20,101);
+    border-bottom: .1rem solid rgb(11,20,101);
+    padding: 5rem;
+}
+
+.neptune-facts  .box-container .box span{
+    position: relative;
+    right: -43%;
+    font-size: 3rem;
+    font-weight: 900;
+    width: 4rem;
+    padding: 1rem 2rem;
+    background: rgb(99, 144, 183);
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    color: rgb(11,20,101);
+}
+
+.neptune-facts .box-container .box h3{
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(11, 20, 101);
+}
+
+.neptune-facts .box-container .box p{
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: rgb(99, 144, 183);
+}
+
+
+
+
+/* footer section */
+
+.footer{
+    position: relative;
+    background: var(--blue);
+    color: var(--white);
+   
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18%,1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 3rem;
+    padding-bottom: 2.4rem;
+    color: var(--yellow);
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--white);
+    padding: .7rem 0;
+}
+
+.footer .box-container .box i{
+    color: var(--light-yellow);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover{
+    color: var(--light-blue);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 1.5rem;
+    transition: .9s;
+    color: var(--light-blue);
+}
+
+.footer .box-container .box .icon a{
+   height: 3rem;
+   width: 3rem; 
+   text-align: center;
+   background: var(--light-blue);
+   margin: .5rem;
+   border-radius: .5rem;
+}
+
+.footer .box-container .box .icon a:hover{
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+
+    section{
+        padding: 3rem 2rem;
+    }
+}
+
+
+@media (max-width:760px){
+    .header{
+        padding: 3rem;
+    }
+
+    #menu-bar{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        left: 0;
+        top: 99%;
+        right: 0;
+        background-color: var(--blue);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
+    .header .navbar ul li{
+        width: 100%;
+    }
+
+    .header .navbar ul li ul{
+        width:100%;
+        position: relative;
+        left: 0;
+    }
+
+    .header .navbar ul li:hover ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(49%,1fr));
+    }
+
+    .mercury-home{
         display: flex;
         flex-direction: column;
+    }
+
+    .mercury-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mercury-facts .heading span{
+        margin-top: 2rem;
+    }
+
+    .venus-home{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .venus-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .venus-facts .heading span{
+        margin-top: 2rem;
+    }
+
+    .earth-home{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .earth-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .earth-facts .heading span{
+        margin-top: 2rem;
+    }
+
+    .mars-home{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .mars-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mars-facts .heading span{
+        margin-top: 2rem;
+    }
+
+    .jupiter-home{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .jupiter-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .jupiter-facts .heading span{
+        margin-top: 2rem;
+    }
+
+    .saturn-home{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .saturn-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .saturn-facts .heading span{
+        margin-top: 2rem;
+    }
+
+    .uranus-home{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .uranus-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .uranus-facts .heading span{
+        margin-top: 2rem;
+    }
+
+    .neptune-home{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .neptune-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .neptune-facts .heading span{
+        margin-top: 2rem;
+    }
+
+    .sun{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .sun-facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sun-facts .heading span{
+        margin-top: 2rem;
+    }
+
+
+    .footer .box-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .facts .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .all-planet .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .missions .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .eclipse-home .name{
+        padding-top: 3rem;
+    }
+
+    .sl-container .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
+/* Animation  */
+@keyframes shrink{
+    0% , 25%{
+        transform: scale(16);
         position: relative;
-        top: -12vh;
-}
-.visitor{
-  color: white;
-  position: relative;
-  top: 0.8vh;
-}
-.human-visitor{
- position: relative;
- right: 10vh;
- top: -18vh;
- color: rgb(132, 167, 224);
-
-}
-.moon-info{
-  position: relative;
-  top: -12vh;
-  display: flex;
-  flex-direction: column;
-}
-.walker-head{
-  position: relative;
-  top: -10.8vh;
-  right: -110vh;
-  color: rgb(132, 167, 224);
-}
-.waker{
-  color: white;
-  position: relative;
-  top: -9.5vh;
-  right: -30vh;
-}
-.robo-visit{
-  position: relative;
-  right: -75rem;
-  top: -15em;
-  color: rgb(132, 167, 224);
-}
-.robo-no{
-  
-
-  position: relative;
-  right: 39rem;
-  top: 0.6em;
-}
-.moonwalker{
-  position: relative;
-  right: -1rem;
-  /* position: relative; */
-  top: -14vh;
-  
-}
-.bg-img{
-  filter: opacity(45%);
-  height: 12vh;
-  position: relative;
-  top: -6vh;
-}
-
-.moon-des{
-color: white;
-  width: 40vw;
-  position: relative;
-  top: 10rem;
-  line-height: 5vh;
-  font-family: 'Kalam', cursive;
-}
-.earth-moon-lower-body{
-  position: relative;
-  top: -18.8em;
-  background-repeat: repeat-y;
-  background-size: 100vw 50vh;
-  height: 400vh;
-  background-image: url(https://t4.ftcdn.net/jpg/04/63/04/75/360_F_463047556_fjroWSSRHQDt0PUsXTi4wyBzXVh1U01G.jpg);
-}
-.moon-facts{
-  color: white;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  top: 30rem;
-  font-family: 'Kalam', cursive;
-}
-.fact1tit{
-  color: white;
-  position: relative;
-  top: 40rem;
-  right: -16rem;
-
-  /* height: 100vh; */
-}
-.facts{
-  font-family: 'Kalam', cursive;
-}
-.fact-container{
-  
-  display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(19%,1fr));
-}
-.fact1-des{
-  /* border-right: 2px solid; */
-  position: relative;
-  top: 45rem;
-  right: -6rem;
-  color: white;
-  width: 15rem;
-  text-align: center;
-}
-.fact2-des{
-  position: relative;
-  top: 5rem;
-  right: 9rem;
-  color: white;
-  width: 15rem;
-  text-align: center;
-}
-.fact3-des{
-  position: relative;
-  top: 45rem;
-  right: 7rem;
-  color: white;
-  width: 18rem;
-  text-align: center;
-}
-
-.fact2tit{
-  color: white;
-  position: relative;
-  top: 40rem;
-  right: -10rem;
-}
-.fact3tit{
-  color: white;
-  position: relative;
-  top: 40rem;
- right: -5rem;
-}
-.fact-img{
-  height: 30vh;
-  position: relative;
-  top: 40em;
-  right: -8em;
-}
-.num{
-  color: white;
-  position: relative;
-  top: 19em;
-  right: -8em;
-}
-#moon-know{
-  position: relative;
-  top: -10em;
-  right: 23em;
-  z-index: 1;
-}
-/* ==========mars-moon-css========== */
-
-.mars-moon-main-img{
-  height: 80vh;
-  position: relative;
-  /* right: -80vh; */
-  top: 10vh;
-  filter: contrast(120%);
-}
-.mars_moon_upper-body{
-  background-repeat: no-repeat;
-  background-size: 100vw 90vh;
-background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
-  height: 90vh;
-}
-.main-mars-moon-head{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -18em;
-  font-family: 'Kalam', cursive;
-}
-.main-mars-moon-des{
-  position: relative;
-  top: -34em;
-  right: -26em;
-  width: 30vw;
-  color: white;
-  line-height: 3vh;
-  font-family: 'Kalam', cursive;
-}
-
-.mars_moon_low-body{
-  background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
-  height: 300em;
-  background-size: 100vw 80vh;
-  position: relative;
-  background-repeat: repeat-y;
-  top: 0.2vh;
-}
-.basic-des{
-  width: 30vw;
-  position: relative;
-  top: 16em;
-}
-
-.phobos-img{
-  position: relative;
-  top: 39em;
-  right: -6em;
-}
-.phobos-des{
-  position: relative;
-  top: -8em;
-  right: -26em;
-  width: 34vw;
-  color: white;
-  
-  line-height: 3em;
-  font-family: 'Kalam', cursive;
-
-}
-.phobos-head{
-  position: relative;
-  top: 10em;
-  font-size: 5vh;
-  font-family: 'Kalam', cursive;
-  z-index: 1;
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.Deimos-head{
-  position: relative;
-  /* top: 10em; */
-  font-size: 5vh;
-  font-family: 'Kalam', cursive;
-  z-index: 1;
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.deimos-img{
-  position: relative;
-  top: 9em;
-  right: -6em;
-  mix-blend-mode: difference;
-}
-.Deimos-des{
-  position: relative;
-  top: -32em;
-  right: -26em;
-  width: 34vw;
-  color: white;
-  
-  line-height: 3em;
-  font-family: 'Kalam', cursive;
-
-}
-/* =========jupiter-moon-css========== */
-
-#jupiter-moon-img{
-
-  position: relative;
-  right: -39rem;
-  width: 60vw;
-  height: 95vh;
-background-image: url(https://wallpaperaccess.com/full/17493.jpg);
-background-size: 100vw 100vh;
-}
-
-.jupiter-moon-upper-body{
-  background: #000;
-  height: 95vh;
-
-}
-.jupiter-moon-tit{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -43rem;
-  font-family: 'Kalam', cursive;
-}
-.jupiter-moon-tit-des{
-  color: white;
-  position: relative;
-  top: -40rem;
-  width: 30rem;
-  right: 25em;
-  font-family: 'Kalam', cursive;
-  line-height: 4vh;
-}
-
-.jupiter-moon-lower-body{
-  height: 470em;
-  background-size: 100vw 70em;
-  position: relative;
-  background-repeat: repeat-y;
-  top: 0.2vh;
-
-  background-image: url(https://unblast.com/wp-content/uploads/2021/01/Space-Background-Image-7.jpg);
-}
-
-.abt-tit{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 13rem;
-  font-family: 'Kalam', cursive;
-}
-.abt-des{
-  position: relative;
-  top: 18em;
-
-  width: 38vw;
-  color: white;
-  
-  line-height: 3em;
-  font-family: 'Kalam', cursive;
-}
-.ul-jup-des{
-  position: relative;
-  top: 25em;
-right: -30em;
-  width: 38vw;
-  color: white;
-  
-  line-height: 3em;
-  font-family: 'Kalam', cursive;
-}
-.jupiter-moon-img{
-  position: relative;
-  top: 50em;
-  mix-blend-mode: plus-lighter;
-}
-.jupiter-moon-des{
-  position: relative;
-  top: 50em;
-  
-  width: 40vw;
-  color: white;
-  
-  line-height: 3em;
-  font-family: 'Kalam', cursive;
-  
-}
-.jupiter-moon-container{
-  margin-bottom: 40em;
-  display: flex;
-}
-.jupiter-moon1-h1{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 40rem;
-  font-family: 'Kalam', cursive;
-  
-}
-
-/* =========saturn-moon-css========== */
-
-.saturn-moon-upper-body{
-  background: #000;
-  height: 95vh;
-
-}
-.saturn-moon-tit{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -41rem;
-  font-family: 'Kalam', cursive;
-}
-.saturn-moon-tit-des{
-  color: white;
-  position: relative;
-  z-index: 1;
-  top: -40rem;
- 
-  width: 30rem;
-
-  right: -25em;
-  font-family: 'Kalam', cursive;
-  line-height: 4vh;
-}
-#saturn-moon-img{
-
-  position: relative;
-
-  width: 60vw;
-  filter: contrast(130%);
-  height: 95vh;
-background-image: url(https://wallpaperaccess.com/full/17493.jpg);
-background-size: 100vw 100vh;
-}
-.saturn-moon-lower-body{
-  height: 550em;
-  background-size: 100vw 70em;
-  position: relative;
-  background-repeat: repeat-y;
-  top: 0.2vh;
-
-  background-image: url(https://images8.alphacoders.com/825/825559.jpg);
-}
-.abt-tit-sat{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 13rem;
-  font-family: 'Kalam', cursive;
-}
-.abt-des-sat{
-  position: relative;
-  top: 18em;
-
-  width: 38vw;
-  color: white;
-  
-  line-height: 3em;
-  font-family: 'Kalam', cursive;
-}
-.saturn-moons-list-img{
-  height:150vh;
-  position: relative;
-  right:-20em;
-  /* width: 60vw; */
-  top: 40em;
-  margin-bottom: 10em;
-}
-
-.saturn-moon-img{
-  position: relative;
-  top: 50em;
-  /* mix-blend-mode: lighten; */
-}
-.saturn-moon-container{
-  margin-bottom: 40em;
-  display: flex;
-}
-.saturn-moon1-h1{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 40rem;
-  font-family: 'Kalam', cursive;
-  
-}
-.saturn-moon-des{
-  position: relative;
-  top: 50em;
-  
-  width: 40vw;
-  color: white;
-  
-  line-height: 3em;
-  font-family: 'Kalam', cursive;
-  
-}
-
-/* =========uranus-moon-css========== */
-.uranus-moon-upper-body{
-  background: #000;
-  height: 95vh;
-
-}
-.uranus-moon-tit{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -44rem;
-  font-family: 'Kalam', cursive;
-}
-.uranus-moon-tit-des{
-  color: white;
-  position: relative;
-  z-index: 1;
-  top: -43rem;
- 
-  width: 30rem;
-
-  right: -25em;
-  font-family: 'Kalam', cursive;
-  line-height: 4vh;
-}
-#uranus-moon-img{
-
-  position: relative;
-
-  width: 60vw;
-  filter: contrast(130%);
-  height: 95vh;
-background-image: url(https://wallpaperaccess.com/full/17493.jpg);
-background-size: 100vw 100vh;
-}
-
-.uranus-moon-lower-body{
-  height: 580em;
-  background-size: 100vw 50em;
-  position: relative;
-  background-repeat: repeat-y;
-  top: 0.2vh;
-
-  background-image: url(https://i.pinimg.com/originals/36/fd/39/36fd39fd111528893623c10f4bbd60af.jpg);
-}
-.abt-tit-ura{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 13rem;
-  font-family: 'Kalam', cursive;
-}
-.abt-des-ura{
-  position: relative;
-  top: 18em;
-
-  width: 38vw;
-  color: white;
-  
-  line-height: 3em;
-  font-family: 'Kalam', cursive;
-}
-
-.saturn-all-moon-h2{
-  color: white;
-  position: relative;
-  top: 85vh;
-  font-family: 'Kalam', cursive;
-  display: flex;
-  justify-content: center;
-  height: 8vh;
-  z-index: 1;
-  font-size: 3vh;
- 
-  letter-spacing: 0.3vh;
-}
-
-#ura-contain{
-  position: relative;
-  top: 110vh;
-  z-index: 1;
-}
-
-/* =========uranus-moon-css========== */
-.neptune-moon-upper-body{
-  background: #000;
-  height: 115vh;
-
-}
-.neptune-moon-tit{
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -53rem;
-  font-family: 'Kalam', cursive;
-}
-.neptune-moon-tit-des{
-  color: white;
-  position: relative;
-  z-index: 1;
-  top: -49rem;
- 
-  width: 30rem;
-
-  right: 25em;
-  font-family: 'Kalam', cursive;
-  line-height: 4vh;
-}
-#neptune-moon-img{
-
-  position: relative;
-
-  width: 60vw;
-  filter: contrast(160%);
-  height: 115vh;
-  right: -38em;
-background-image: url(https://wallpaperaccess.com/full/17493.jpg);
-background-size: 100vw 100vh;
-}
-
-.neptune-moon-lower-body{
-  height: 480em;
-  background-size: 100vw 50em;
-  position: relative;
-  background-repeat: repeat-y;
-  top: 0.2vh;
-
-  background-image: url(https://t3.ftcdn.net/jpg/05/44/87/54/360_F_544875466_QsrHVa8G2pn94PcVQ7nU2sBJ3srNLnOk.jpg);
+        left: -60vh;
+    }
+    75% , 100%{
+        transform: scale(2); 
+        position: relative;
+        left: 0vh;
+    }
 }

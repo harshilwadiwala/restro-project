@@ -1,3 +1,12 @@
+let navbar=document.querySelector('.navbar');
+document.querySelector('#menu-bar').onclick=()=>{
+    navbar.classList.toggle('active');
+};
+
+window.onscroll=()=>{
+    navbar.classList.remove('active');
+};
+
 const imageElement = document.getElementById('image');
 const image1 = 'meteors-1.jpg'; // URL of the first image
 const image2 = 'meteors-2.jpg'; // URL of the second image
